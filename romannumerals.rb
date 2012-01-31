@@ -22,11 +22,7 @@ def to_arabic_numeral(roman)
 	arabic = 0
 	value = {"I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "D" => 500, "M" => 1000}
 	while (!(current = roman.slice!(0)).nil?)
-		if (value[roman.byteslice(0)] || 0) > value[current]
-			arabic -= value[current]
-		else
-			arabic += value[current]
-		end
+		(value[roman.byteslice(0)] || 0) > value[current] ? arabic -= value[current] : arabic += value[current]
 	end
 	return arabic
 end
