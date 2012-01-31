@@ -24,7 +24,10 @@ def to_arabic_numeral(roman)
 	while (!(current = roman.slice!(0)).nil?)
 		(value[roman.byteslice(0)] || 0) > value[current] ? arabic -= value[current] : arabic += value[current]
 	end
-	return arabic
+
+	arabic
+
+	#interesting: ?X = string X
 end
 
 puts to_arabic_numeral(roman)
