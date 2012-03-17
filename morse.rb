@@ -2,19 +2,19 @@
 #We'll provide you with a string of dots and dashes and your interpreter will need to translate these back to English.
 #We'll be using the letters A-Z only of the international (ITU) Morse code astandard. 
 #Letter	Morse	Letter	Morse
-#A		.-		N		-.
-#B		-...	O		---
-#C		-.-.	P		.--.
-#D		-..		Q		--.-
-#E		.		R		.-.
-#F		..-.	S		...
-#G		--.		T		-
-#H		....	U		..-
-#I		..		V		...-
-#J		.---	W		.--
-#K		-.-		X		-..-
-#L		.-..	Y		-.--
-#M		--		Z		--..
+#A	.-	N	-.
+#B	-...	O	---
+#C	-.-.	P	.--.
+#D	-..	Q	--.-
+#E	.	R	.-.
+#F	..-.	S	...
+#G	--.	T	-
+#H	....	U	..-
+#I	..	V	...-
+#J	.---	W	.--
+#K	-.-	X	-..-
+#L	.-..	Y	-.--
+#M	--	Z	--..
 #Letters will be separated by a single blank space, words will be separated by 3 blank spaces. 
 #Your function should return uppercase characters only.
 
@@ -49,7 +49,8 @@ def morse_to_eng(morse)
 	sentence.strip
 
 	#this is embarassing... second slowest submission so far
-	#split and gsub are much much better
+	#makes sense though since I parsed by character instead of word derp derp
+	#split and gsub are much much better approaches, and just generally regexp
 end
 
 puts morse_to_eng(morse)
